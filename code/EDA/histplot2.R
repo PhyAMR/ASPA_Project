@@ -1,7 +1,7 @@
 source("code/Data.R")
 library(ggplot2)
 
-ggplot(data_no_nan, aes(x = year, y = monthly_average)) +
+ggplot(data_no_nan, aes(x = num_days, y = monthly_average)) +
   # 1. Automatically calculate and plot the annual mean as bars
   stat_summary(fun = mean, geom = "bar", fill = "darkcyan", width = 0.8) +
   
@@ -17,10 +17,10 @@ ggplot(data_no_nan, aes(x = year, y = monthly_average)) +
   ) +
   
   # Zoom into the y-axis cleanly so differences are visible
-  coord_cartesian(ylim = c(300, 430)) + 
+  #coord_cartesian(ylim = c(300, 430)) + 
   
   theme_minimal() +
   labs(
-    x = "Year",
-    y = expression(paste("Yearly Average CO" [2], " Concentration (ppm) (", pm, " ", sigma, ")"))
+    x = "Number of days measured in a month",
+    y = expression(paste("Average CO" [2], " Concentration (ppm) (", pm, " ", sigma, ")"))
   )
