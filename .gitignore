@@ -4,3 +4,6 @@ main_files/
 
 !report/texts/
 
+models/*.rds
+Rplots.pdf
+
