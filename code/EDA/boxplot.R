@@ -1,9 +1,8 @@
 source("code/Data.R")
 library(ggplot2)
 
-data_no_nan$seasonal_deviation <- data_no_nan$monthly_average - data_no_nan$deseasonalized
 
-ggplot(data_no_nan, aes(x = factor(month), y = seasonal_deviation)) +
+ggplot(data_imputed, aes(x = factor(month), y = seasonal_deviation)) +
   # Create a boxplot for each month
   geom_boxplot(fill = "lightblue", color = "darkblue", outlier.size = 0.5) +
   

@@ -6,7 +6,7 @@ library(dplyr)
 # --- PLOT 1: Uncertainty and Std Dev Over Time ---
 # We use geom_line to see if instrument precision or environmental variance 
 # has changed over the decades. 
-plot_time <- ggplot(data_no_nan, aes(x = decimal_date)) +
+plot_time <- ggplot(data_imputed, aes(x = decimal_date)) +
   # Plot standard deviation of daily measurements
   geom_line(aes(y = st_dev, color = "Daily St. Dev."), linewidth = 0.5, alpha = 0.7) +
   # Plot calculated uncertainty of the monthly mean
@@ -27,7 +27,7 @@ plot_time <- ggplot(data_no_nan, aes(x = decimal_date)) +
 # --- PLOT 2: Standard Deviation by Month ---
 # This checks if the variation in daily CO2 changes depending on the season 
 # (e.g., higher variance during summer drawdown months).
-plot_monthly <- ggplot(data_no_nan, aes(x = factor(month), y = st_dev)) +
+plot_monthly <- ggplot(data_imputed, aes(x = factor(month), y = st_dev)) +
   # Boxplot to show the distribution of standard deviations for each month across all years
   geom_boxplot(fill = "lightsteelblue", color = "black", outlier.size = 0.5) +
   # Add a trend line connecting the monthly means

@@ -1,7 +1,7 @@
 source("code/Data.R")
 library(ggplot2)
 
-ggplot(data_no_nan, aes(x = num_days, y = monthly_average)) +
+ggplot(data_imputed, aes(x = num_days, y = monthly_average)) +
   # 1. Automatically calculate and plot the annual mean as bars
   stat_summary(fun = mean, geom = "bar", fill = "darkcyan", width = 0.8) +
   

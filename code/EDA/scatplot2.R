@@ -1,7 +1,7 @@
 source("code/Data.R")
 library(ggplot2)
 
-ggplot(data_no_nan, aes(x = decimal_date)) +
+ggplot(data_imputed, aes(x = decimal_date)) +
   # 1. Error bars for monthly average    
   
   # 2. Monthly Average Points

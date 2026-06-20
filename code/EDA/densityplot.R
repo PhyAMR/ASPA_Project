@@ -4,7 +4,7 @@ library(dplyr)
 library(ggplot2)
 
 # 1. Clean the data subset and make 'month' a factor
-eda_subset <- data_no_nan %>% 
+eda_subset <- data_imputed %>% 
   select(monthly_average, deseasonalized, st_dev, unc_mon_mean, month, num_days) %>% 
   mutate(month = factor(month, labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", 
                                           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")))
