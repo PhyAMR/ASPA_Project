@@ -31,10 +31,11 @@ comparison_df <- data.frame(
 )
 
 dir.create(RESULTS_DIR, recursive = TRUE, showWarnings = FALSE)
-write.csv(comparison_df, LOO_CSV_PATH, row.names = FALSE)
+brms_loo_path <- file.path(RESULTS_DIR, "brms_loo_comparison.csv")
+write.csv(comparison_df, brms_loo_path, row.names = FALSE)
 
 print(comparison_df)
-cat("Saved comparison to:", LOO_CSV_PATH, "\n")
+cat("Saved comparison to:", brms_loo_path, "\n")
 
 if (comparison_df$model[1] != "fit_quad") {
   message("Note: LOO prefers the linear model over the quadratic model.")

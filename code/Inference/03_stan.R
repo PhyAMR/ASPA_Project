@@ -44,5 +44,6 @@ fit_lin$cmdstan_diagnose()
 cat("\nDiagnostics: Quadratic\n")
 fit_quad$cmdstan_diagnose()
 
+dir.create("code/Inference/results/stan_fits", recursive = TRUE, showWarnings = FALSE)
 fit_lin$save_object("code/Inference/results/stan_fits/fit_lin.rds")
 fit_quad$save_object("code/Inference/results/stan_fits/fit_quad.rds")

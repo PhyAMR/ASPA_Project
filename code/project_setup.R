@@ -4,8 +4,10 @@ MODEL_DIR <- "models"
 RESULTS_DIR <- "results"
 FIT_LINEAR_PATH <- file.path(MODEL_DIR, "fit_linear.rds")
 FIT_QUAD_PATH <- file.path(MODEL_DIR, "fit_quad.rds")
-LOO_CSV_PATH <- file.path(RESULTS_DIR, "loo_comparison.csv")
-FORECAST_PLOT_PATH <- file.path(RESULTS_DIR, "forecast_plot.pdf")
+STAN_FIT_LINEAR_PATH <- file.path("code", "Inference", "results", "stan_fits", "fit_lin.rds")
+STAN_FIT_QUAD_PATH <- file.path("code", "Inference", "results", "stan_fits", "fit_quad.rds")
+STAN_LOO_CSV_PATH <- file.path(RESULTS_DIR, "stan_model_comparison.csv")
+FORECAST_PLOT_PATH <- file.path(RESULTS_DIR, "forecast_plot.png")
 
 find_project_root <- function() {
   if (file.exists("data/co2_data.txt") && file.exists("code/Data.R")) {
