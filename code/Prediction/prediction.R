@@ -81,8 +81,8 @@ comparison_out <- bind_rows(comparison_df, summary_rows)
 
 dir.create(RESULTS_DIR, recursive = TRUE, showWarnings = FALSE)
 write.csv(comparison_out, STAN_LOO_CSV_PATH, row.names = FALSE)
-cat("Saved model comparison to:", STAN_LOO_CSV_PATH, "\n")
-print(comparison_df)
+#cat("Saved model comparison to:", STAN_LOO_CSV_PATH, "\n")
+#print(comparison_df)
 
 # --- DATA PREPARATION (match 03_stan.R) ---
 annual <- unique(data_imputed[, c("year", "yearly_average")])
@@ -115,7 +115,7 @@ projections <- data.frame(
   upper_95 = apply(pred_matrix, 2, quantile, probs = 0.975)
 )
 
-print(projections)
+#print(projections)
 
 hist_years <- seq(min(train_data$year), max(train_data$year), length.out = 200)
 hist_matrix <- sapply(hist_years, function(y) {
@@ -177,6 +177,6 @@ forecast_plot <- ggplot() +
   )
 
 ggsave(FORECAST_PLOT_PATH, forecast_plot, width = 10, height = 6, dpi = 300)
-cat("Saved plot to:", FORECAST_PLOT_PATH, "\n")
+#cat("Saved plot to:", FORECAST_PLOT_PATH, "\n")
 
 forecast_plot

@@ -3,7 +3,10 @@ report/*
 main_files/
 
 !report/texts/
-
+results/
 models/*.rds
-Rplots.pdf
+*.pdf
+*.png
+*.csv
+!main.pdf
 

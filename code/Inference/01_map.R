@@ -63,15 +63,15 @@ map_quad_df <- data.frame(
   converged = map_quad$convergence == 0
 )
 
-cat("MAP: Linear model \n")
-cat("alpha:", map_lin$par[1],  "\n")
-cat("beta: ", map_lin$par[2],  "\n")
-cat("sigma:", map_lin$par[3],  "\n")
-cat("Converged:", map_lin$convergence == 0, "\n\n")
-
-cat("MAP: Quadratic model \n")
-cat("alpha:", map_quad$par[1], "\n")
-cat("beta: ", map_quad$par[2], "\n")
-cat("gamma:", map_quad$par[3], "\n")
-cat("sigma:", map_quad$par[4], "\n")
-cat("Converged:", map_quad$convergence == 0, "\n")
+#cat("MAP: Linear model \n")
+#cat("alpha:", map_lin$par[1],  "\n")
+#cat("beta: ", map_lin$par[2],  "\n")
+#cat("sigma:", map_lin$par[3],  "\n")
+#cat("Converged:", map_lin$convergence == 0, "\n\n")
+#
+#cat("MAP: Quadratic model \n")
+#cat("alpha:", map_quad$par[1], "\n")
+#cat("beta: ", map_quad$par[2], "\n")
+#cat("gamma:", map_quad$par[3], "\n")
+#cat("sigma:", map_quad$par[4], "\n")
+#cat("Converged:", map_quad$convergence == 0, "\n")
