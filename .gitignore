@@ -10,3 +10,5 @@ models/*.rds
 *.csv
 !main.pdf
 
+
+/.luarc.json
