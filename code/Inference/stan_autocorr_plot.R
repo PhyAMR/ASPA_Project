@@ -14,3 +14,5 @@ p_acf_quad <- mcmc_acf(draws_quad)+ theme_default(base_size = 15)
 
 ggsave("code/Inference/results/figures/acf_lin.png",  plot = p_acf_lin,  width = 8, height = 5, dpi = 300)
 ggsave("code/Inference/results/figures/acf_quad.png", plot = p_acf_quad, width = 8, height = 5, dpi = 300)
+
+gridExtra::grid.arrange(p_acf_lin, p_acf_quad, ncol = 2)

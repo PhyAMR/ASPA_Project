@@ -45,13 +45,13 @@ ggplot() +
   scale_color_manual(values = c("Linear" = "#E69F00", "Quadratic" = "#0072B2")) +
   scale_fill_manual( values = c("Linear" = "#E69F00", "Quadratic" = "#0072B2")) +
   labs(
-    title   = "Posterior predictive check: linear vs quadratic CO₂ trend",
+    title   = expression("Posterior predictive check: linear vs quadratic CO"[2]*" trend"),
     x       = "Year",
-    y       = "CO₂ concentration (ppm)",
+    y       = expression("CO"[2]*" concentration (ppm)"),
     color   = "Model",
     fill    = "Model"
   ) +
-  theme_minimal(base_size = 13)
+  theme_minimal(base_size = 10)
 
 ggsave("code/Model_comparison/results/figures/model_comparison_ppc.png",
        width = 10, height = 6, dpi = 300)

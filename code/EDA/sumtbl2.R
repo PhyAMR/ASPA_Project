@@ -20,6 +20,4 @@ skim_table <- skim(summary_data) %>%
     Max = numeric.p100
   )
 
-kable(skim_table, 
-      digits = 2, 
-      booktabs = TRUE) # Makes the table look clean and academic
+# Table rendered separately in main.qmd

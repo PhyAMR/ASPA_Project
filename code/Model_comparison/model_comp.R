@@ -15,6 +15,6 @@ log_ml_quad <- laplace_log_ml(map_quad)
 log_BF   <- log_ml_quad - log_ml_lin
 log10_BF <- log_BF / log(10)
 
-cat("Log marginal likelihood (linear):    ", log_ml_lin,  "\n")
-cat("Log marginal likelihood (quadratic): ", log_ml_quad, "\n")
-cat("Log10 BF (quad vs lin):              ", log10_BF,    "\n")
+#cat("Log marginal likelihood (linear):    ", log_ml_lin,  "\n")
+#cat("Log marginal likelihood (quadratic): ", log_ml_quad, "\n")
+#cat("Log10 BF (quad vs lin):              ", log10_BF,    "\n")

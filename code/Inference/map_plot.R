@@ -29,11 +29,11 @@ ggplot() +
             linewidth = 1.1) +
   scale_color_manual(values = c("Data points" = "grey40", "Linear" = "#E69F00", "Quadratic" = "#0072B2")) +
   labs(
-    title = "MAP estimates: linear vs quadratic CO₂ trend",
+    title = expression("MAP estimates: linear vs quadratic CO"[2]*" trend"),
     x     = "Year",
     y     = expression("CO"[2]*" concentration (ppm)"),
     color = NULL
   ) +
-  theme_minimal(base_size = 13)
+  theme_minimal(base_size = 11)
 
 ggsave("code/Inference/results/figures/map_fits.png", width = 10, height = 6, dpi = 300)
