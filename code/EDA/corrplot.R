@@ -22,4 +22,4 @@ colnames(cor_data) <- c(
 
 # Generate and customize the correlation plot
 corrplot(cor(cor_data), method = "pie", addCoef.col = "black", tl.cex = 0.8, number.cex = 0.7,
-         tl.col = "black", tl.srt = 45, addrect = 2, rect.col = "blue", rect.lwd = 1.5)
+         tl.col = "black", tl.srt = 80, addrect = 2, rect.col = "blue", rect.lwd = 1.5, mar = c(0, 0, 1, 0), diag = FALSE)

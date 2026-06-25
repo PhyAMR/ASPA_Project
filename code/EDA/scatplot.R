@@ -29,6 +29,6 @@ ggplot(data_imputed, aes(x = decimal_date)) +
   theme_minimal() +
   labs(
     x = "Year",
-    y = expression(paste("Average CO" [2], " Concentration (ppm) (", pm, " ", sigma, ")"))
+    y = expression(paste("Average CO" [2], " Concentration (ppm)"))
   )
 
